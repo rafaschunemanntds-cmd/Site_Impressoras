@@ -1,0 +1,64 @@
+.all{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.voltar{
+   height: 30px;
+   width: 30px;
+}
+
+.impressoras{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+
+.luide{
+    border: 2px solid black;
+    border-radius: 7px;
+}
+.espacoUm{
+    display: flex;
+}
+.espacoDois{
+    display: flex;
+}
+.wrapInfo{
+    display: flex;
+    flex-direction: column;
+}
+.impressoraUm{
+    width: 300px;
+    height: 300px;
+    
+}
+.impressoraDois{
+    width: 300px;
+    height: 300px;
+}
+
+.add{
+    background-color:#f39f29;
+    color: black;
+    width: 200px;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 7px;
+    border: none;
+}
+
+.quant{
+    border: none;
+}
+
+.titulo{
+    font-family: "K2D", sans-serif;
+    color: black;
+    font-size: 25px;
+}
+.texto{
+    color: black;
+    font-family: "K2D", sans-serif;
+}

@@ -1,0 +1,94 @@
+.all{
+  position: relative;
+  background-color: var(--grafite);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.all::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 180px;
+  background: var(--camadas);
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+  mask-image: linear-gradient(to bottom, #000, transparent);
+  pointer-events: none;
+}
+.all > *{ position: relative; }
+ 
+.voltar{ align-self: flex-start; height: 34px; width: auto; margin: 20px 24px; cursor: pointer; transition: transform .15s; }
+.voltar:hover{ transform: translateX(-3px); }
+ 
+.headline{
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 16px 0 32px;
+  text-align: center;
+}
+ 
+.botoes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 460px;
+  padding: 0 16px;
+}
+ 
+.info{
+  height: 54px;
+  width: 100%;
+  padding: 0 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #5b6672;
+  background-color: #27303a;
+  color: #fff;
+  transition: border-color .2s, background-color .2s;
+}
+.info::placeholder{ color: var(--suave-esc); }
+.info:hover{ border-color: #8693a0; }
+.info:focus{ border-color: var(--laranja); background-color: #2d3742; outline: none; }
+ 
+.botao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  border: 2px solid #ffa07d;
+  border-radius: 8px;
+  background-color: var(--laranja);
+  color: var(--tinta);
+  font-size: 19px;
+  font-weight: 700;
+  transition: background-color .2s, border-color .2s;
+}
+.botao:hover{ background-color: var(--laranja-claro); border-color: #ffc2ab; }
+ 
+.erro{ align-self: flex-start; color: #ff7b6b; font-size: 15px; }
+.ver{ align-self: flex-start; color: var(--suave-esc); font-size: 16px; }
+.ver input{ accent-color: var(--laranja); }
+.link{
+  width: 100%;
+  height: 54px;
+  border: 2px solid #5b6672;
+  border-radius: 8px;
+  background-color: #27303a;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  transition: border-color .2s, background-color .2s;
+}
+.link:hover{ border-color: #8693a0; background-color: #2d3742; }
+ 
+@media (width <= 700px){
+  .info, .botao, .link{ height: 50px; font-size: 17px; }
+}

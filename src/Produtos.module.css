@@ -1,0 +1,73 @@
+.all{
+  background-color: var(--bg);
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+.topo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 24px;
+}
+.voltar{
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+  transition: transform .15s;
+}
+.voltar:hover{ transform: translateX(-3px); }
+.conta{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--texto-suave);
+}
+.link{
+  background-color: var(--azul);
+  color: #000;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color .2s;
+}
+.link:hover{ background-color: var(--azul-hover); }
+.sair{
+  background: none;
+  border: none;
+  color: var(--erro);
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.produtos_decima,
+.produtos_debaixo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(24px, 6vw, 100px);
+  padding: 30px 24px;
+}
+
+.produtos_decima img,
+.produtos_debaixo img{
+  width: clamp(150px, 22vw, 320px);
+  height: auto;
+  border-radius: var(--raio);
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+.produtos_decima img:hover,
+.produtos_debaixo img:hover{
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(41, 112, 243, .35);
+}
+
+@media (width <= 1000px){
+  .produtos_decima img,
+  .produtos_debaixo img{ width: 150px; }
+}
